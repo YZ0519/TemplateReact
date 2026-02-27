@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Frontend (Vite React)",
+      "runtimeExecutable": "cmd.exe",
+      "runtimeArgs": ["/c", "cd /d D:\\GitHub\\DemoClaude\\client && npm run dev"],
+      "port": 3000
+    },
+    {
+      "name": "Backend (ASP.NET Core API)",
+      "runtimeExecutable": "cmd.exe",
+      "runtimeArgs": ["/c", "cd /d D:\\GitHub\\DemoClaude\\API && dotnet watch"],
+      "port": 5001
+    }
+  ]
+}

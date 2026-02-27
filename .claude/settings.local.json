@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dotnet ef migrations add InitialCreate --project Persistence --startup-project API)",
+      "Bash(dotnet build)",
+      "Bash(npm install tailwindcss @tailwindcss/vite lucide-react)",
+      "Bash(npm uninstall @mui/material @mui/icons-material @mui/x-date-pickers @emotion/react @emotion/styled @fontsource/roboto leaflet react-leaflet react-calendar @microsoft/signalr react-intersection-observer date-fns)",
+      "Bash(npm install typescript@latest --save-dev)",
+      "Bash(node_modules/.bin/tsc --version)",
+      "Bash(npm run build)",
+      "Bash(__NEW_LINE_9a09a46071556f74__ cat)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(cmd.exe /c \"where npm\")",
+      "Bash(cmd.exe /c \"where dotnet\")",
+      "Bash(xargs grep -l \"Template\")"
+    ]
+  }
+}
