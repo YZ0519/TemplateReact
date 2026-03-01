@@ -29,6 +29,8 @@ agent.interceptors.response.use(
     await sleep(1000);
     store.uiStore.isIdle();
 
+    if (!error.response) return Promise.reject(error);
+
     const { status, data } = error.response;
     switch (status) {
       case 400:

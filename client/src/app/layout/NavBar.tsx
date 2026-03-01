@@ -29,6 +29,14 @@ export default function NavBar() {
           {/* Nav links */}
           <div className="flex items-center gap-1">
             <NavLink
+              to="/projects"
+              className={({ isActive }) =>
+                `px-3 py-2 rounded text-sm font-medium hover:bg-white/20 transition-colors ${isActive ? "bg-white/20" : ""}`
+              }
+            >
+              Projects
+            </NavLink>
+            <NavLink
               to="/errors"
               className={({ isActive }) =>
                 `px-3 py-2 rounded text-sm font-medium hover:bg-white/20 transition-colors ${isActive ? "bg-white/20" : ""}`

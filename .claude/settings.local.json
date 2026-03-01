@@ -12,7 +12,12 @@
       "mcp__Claude_Preview__preview_start",
       "Bash(cmd.exe /c \"where npm\")",
       "Bash(cmd.exe /c \"where dotnet\")",
-      "Bash(xargs grep -l \"Template\")"
+      "Bash(xargs grep -l \"Template\")",
+      "Bash(dotnet ef:*)",
+      "Bash(dotnet build:*)",
+      "Bash(npm install:*)",
+      "Bash(dotnet test:*)",
+      "Bash(npx vitest:*)"
     ]
   }
 }

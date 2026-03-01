@@ -8,6 +8,10 @@ import LoginForm from "../../features/account/LoginForm";
 import RequireAuth from "./RequireAuth";
 import RegisterForm from "../../features/account/RegisterForm";
 import ProfilePage from "../../features/profiles/ProfilePage";
+import ProjectListPage from "../../features/projects/ProjectListPage";
+import ProjectDetailPage from "../../features/projects/ProjectDetailPage";
+import CreateProjectPage from "../../features/projects/CreateProjectPage";
+import EditProjectPage from "../../features/projects/EditProjectPage";
 
 export const router = createBrowserRouter([
   {
@@ -18,6 +22,8 @@ export const router = createBrowserRouter([
         element: <RequireAuth />,
         children: [
           { path: "profiles/:id", element: <ProfilePage /> },
+          { path: "projects/create", element: <CreateProjectPage /> },
+          { path: "projects/:slug/edit", element: <EditProjectPage /> },
         ],
       },
       { path: "", element: <HomePage /> },
@@ -26,6 +32,8 @@ export const router = createBrowserRouter([
       { path: "server-error", element: <ServerError /> },
       { path: "login", element: <LoginForm /> },
       { path: "register", element: <RegisterForm /> },
+      { path: "projects", element: <ProjectListPage /> },
+      { path: "projects/:slug", element: <ProjectDetailPage /> },
       { path: "*", element: <Navigate replace to={"/not-found"} /> },
     ],
   },

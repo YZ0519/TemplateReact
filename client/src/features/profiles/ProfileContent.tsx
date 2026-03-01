@@ -1,13 +1,10 @@
 import { useState } from "react";
 import ProfilePhotos from "./ProfilePhotos";
 import ProfileAbout from "./ProfileAbout";
-import ProfileFollowings from "./ProfileFollowings";
 
 const tabs = [
   { label: "About" },
   { label: "Photos" },
-  { label: "Followers" },
-  { label: "Following" },
 ];
 
 export default function ProfileContent() {
@@ -17,8 +14,6 @@ export default function ProfileContent() {
     switch (activeTab) {
       case 0: return <ProfileAbout />;
       case 1: return <ProfilePhotos />;
-      case 2: return <ProfileFollowings activeTab={activeTab} />;
-      case 3: return <ProfileFollowings activeTab={activeTab} />;
       default: return null;
     }
   };
