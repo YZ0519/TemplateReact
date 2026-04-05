@@ -2,6 +2,7 @@ import axios from "axios";
 import { store } from "../stores/store";
 import { toast } from "react-toastify";
 import { router } from "../../app/router/Routes";
+import { queryClient } from "../queryClient";
 
 const sleep = (delay: number) => {
   return new Promise((resolve) => {
@@ -47,7 +48,10 @@ agent.interceptors.response.use(
         }
         break;
       case 401:
-        toast.error("Unauthorised");
+        if (queryClient.getQueryData(["user"])) {
+          queryClient.removeQueries({ queryKey: ["user"] });
+          router.navigate("/login");
+        }
         break;
       case 404:
         router.navigate("/not-found");

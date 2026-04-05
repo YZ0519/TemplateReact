@@ -33,7 +33,7 @@ export default function ProjectCard({ project }: Props) {
         </div>
       )}
       <h2 className="text-xl font-semibold text-gray-900 mb-2">{project.title}</h2>
-      <p className="text-gray-500 text-sm mb-4 line-clamp-2">
+      <p className="text-gray-500 text-sm mb-4 line-clamp-4 whitespace-pre-line leading-relaxed">
         {project.description}
       </p>
       <TechStackList items={project.techStacks} grouped />

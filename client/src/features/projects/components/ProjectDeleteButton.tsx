@@ -29,7 +29,7 @@ export default function ProjectDeleteButton({ projectId }: Props) {
 
   return (
     <div className="flex items-center gap-2 border border-red-200 bg-red-50 rounded px-3 py-1">
-      <span className="text-red-700 text-sm">Are you sure?</span>
+      <span className="text-red-700 text-sm">Are you sure? This cannot be undone.</span>
       <button
         onClick={handleDelete}
         disabled={deleteProject.isPending}

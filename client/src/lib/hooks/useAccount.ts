@@ -38,9 +38,6 @@ export const useAccount = () => {
       await queryClient.removeQueries({
         queryKey: ["user"],
       });
-      await queryClient.removeQueries({
-        
-      });
       await navigate("/");
     },
   });
